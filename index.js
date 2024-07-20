@@ -164,7 +164,7 @@ app.delete("/movie/:id", (req, res) => {
 app.use("*", (req, res) => {
     return res.send(
         `<div>
-        <h1 style="text-align:center;">404 Page Not Found/h1>
+        <h1 style="text-align:center;">404 Page Not Found</h1>
         </div>`
     )
 })
