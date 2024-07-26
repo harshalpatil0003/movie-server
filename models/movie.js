@@ -1,10 +1,12 @@
-import { Schema , model } from "mongoose";
-const mpovieschema = new Schema({
-    name: String,
-    category: String,
-    Image: String,
-    Director: String,
-    description: String
+import { Schema, model } from "mongoose";
+const movieschema = new Schema({
+    title: String,
+    director: String,
+    release_date: String,
+    rating: Number,
+    description: String,
+    image_url: String,
+    trailer_url: String
 })
-const Movie = model("Movie", mpovieschema)
+const Movie = model("Movie", movieschema)
 export default Movie;

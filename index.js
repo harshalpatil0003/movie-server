@@ -3,6 +3,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 dotenv.config()
 import mongoose from 'mongoose';
+import cors from 'cors'
+
 
 import { gethealth } from './controllers/health.js'
 import {
@@ -15,6 +17,7 @@ import {
 import { error } from './controllers/error.js';
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 
 const dbconnection = async () => {
