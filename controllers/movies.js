@@ -31,7 +31,7 @@ const postmovie = async (req, res) => {
 
 }
 const getmovie = async (req, res) => {
-    const allmovies = await Movie.find()
+    const allmovies = await Movie.find().sort({ createdAt: -1 })
     res.json({
         message: "All movies fetched successfully",
         success: true,
